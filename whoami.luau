@@ -10,7 +10,11 @@ local controllers = {}
 local started = false
 
 -- Models
-local ServiceModel = require(script.Service)
+local ServiceModel = class "Service" {
+	Public = {
+		Name = "",
+	}
+}
 
 function Whoami.CreateService(config)
 	assert(not started, "[Hark] No puedes crear servicios después de iniciar")
